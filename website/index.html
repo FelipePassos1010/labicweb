@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de Dataset - LABIC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <button id="pesquisar">Pesquisar</button>
+        <button id="voltar">Voltar</button>
+        <button id="avancar">Proximo</button>
+    </div>
+    <div class="container">
+        <div class="logo">
+            <img src="logo_labic.png" alt="Logotipo LABIC">
+        </div>
+        <h1>Página de Envio de Dataset LABIC</h1>
+        <div class="input-group">
+            <input type="text" id="arquivo_csv" placeholder="Digite 'data.csv'">
+            <button id="prosseguir">Download do dataset, campos de sua escolha</button>
+            <div id="options" class="options">
+                <span id="close-options" style="cursor:pointer; float:right; margin-right:5px;">[X]</span>
+                <label><input type="checkbox" id="selecionar-todos"> Todos</label>
+                <label><input type="checkbox" name="fields" value="id"> ID</label>
+                <label><input type="checkbox" name="fields" value="creation_date"> Data de Criação</label>
+                <label><input type="checkbox" name="fields" value="data.colecao.value"> Valor da Coleção</label>
+                <label><input type="checkbox" name="fields" value="Autor"> Autor</label>
+                <label><input type="checkbox" name="fields" value="Data"> Data</label>
+                <label><input type="checkbox" name="fields" value="Museu"> Museu</label>
+                <label><input type="checkbox" name="fields" value="Tipo"> Tipo</label>
+                <label><input type="checkbox" name="fields" value="Titulo"> Título</label>
+                <label><input type="checkbox" name="fields" value="Formato"> Formato</label>
+                <label><input type="checkbox" name="fields" value="URL"> URL</label>
+                <label><input type="checkbox" name="fields" value="url"> url</label>
+                <button id="downloadFilteredCsv">Download CSV Filtrado</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
